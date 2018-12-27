@@ -1,0 +1,18 @@
+﻿@model practicescrape.ViewModels.userStockListViewModel
+@{
+    ViewData["Title"] = "Stocks";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Stocks</h2>
+
+<div>
+    <ul>
+        @foreach (var stocks in Model.userStocks)
+        {
+            <li>
+                @stocks.StockSymbol
+            </li>
+        }
+    </ul>
+</div>
