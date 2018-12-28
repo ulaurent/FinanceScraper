@@ -6,7 +6,7 @@
     <title>@ViewData["Title"] - FinanceScraper</title>
 
     <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-spacelab.css" />
         <link rel="stylesheet" href="~/css/site.css" />
     </environment>
     <environment exclude="Development">
@@ -17,25 +17,26 @@
     </environment>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">FinanceScraper</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Scrape" asp-action="Stockinitial">Stocks</a></li>
-                </ul>
-                <partial name="_LoginPartial" />
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Finance Scraper</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a asp-area="" asp-controller="Home" asp-action="About" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a asp-area="" asp-controller="Scrape" asp-action="Stockinitial" class="nav-link">Stocks</a>
+                </li>
+            </ul>
+            
+            <partial name="_LoginPartial" />
         </div>
     </nav>
 
