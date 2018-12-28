@@ -11,7 +11,7 @@
         @foreach (var stocks in Model.userStocks)
         {
             <li>
-                @stocks.StockSymbol
+                @stocks.StockSymbol , @stocks.LastPrice, @stocks.PriceChange , @stocks.MarketTime, @stocks.PercentChange
             </li>
         }
     </ul>
