@@ -1,13 +1,18 @@
-﻿
-
-.text-wrapper {
+﻿.text-wrapper {
     width: 100%;
     margin-top: -40%;
 }
 
-.text-wrapper h1{
-    text-align: left;
+.text-wrapper h1 {
+    text-align: center;
     color: #ffffff;
-    font-size: 10vw;
+    font-size: 80px;
+    font-family: 'lato', cursive;
+}
+
+.text-wrapper p {
+    text-align: center;
+    color: black;
+    font-size: 15px;
     font-family: 'lato', cursive;
 }
