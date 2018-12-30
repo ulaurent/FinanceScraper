@@ -32,6 +32,10 @@ namespace FinanceScraper.Controllers
                 return View();
             }
 
-        }
+            public IActionResult History()
+            {
+                return View();
+            }
+    }
     }
  

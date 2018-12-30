@@ -1,0 +1,13 @@
+﻿
+
+.text-wrapper {
+    width: 100%;
+    margin-top: -40%;
+}
+
+.text-wrapper h1{
+    text-align: left;
+    color: #ffffff;
+    font-size: 10vw;
+    font-family: 'lato', cursive;
+}
