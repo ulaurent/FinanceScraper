@@ -18,6 +18,8 @@ namespace FinanceScraper.Scrape
 
             public List<Stock> Scrapington()
             {
+                ChromeOptions option = new ChromeOptions();
+                option.AddArgument("--headless");
                 IWebDriver driver = new ChromeDriver(Environment.CurrentDirectory);
 
                 WebDriverWait waitForElement = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
@@ -50,9 +52,11 @@ namespace FinanceScraper.Scrape
                 waitForElement.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath("//dialog[@id = '__dialog']/section/button")));
                 driver.FindElement(By.XPath("//dialog[@id = '__dialog']/section/button")).Click();
 
-                // Click on watch list under Portfolio
-                //waitForElement.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath("//a[@class='Fz(m) Fw(b) IbBox Td(n) C($c-fuji-blue-1-b) Ell']")));
-                //driver.FindElement(By.XPath("//a[@class='Fz(m) Fw(b) IbBox Td(n) C($c-fuji-blue-1-b) Ell']")).Click();
+            // Click on watch list under Portfolio
+            //waitForElement.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath("//a[@class='Fz(m) Fw(b) IbBox Td(n) C($c-fuji-blue-1-b) Ell']")));
+            //driver.FindElement(By.XPath("//a[@class='Fz(m) Fw(b) IbBox Td(n) C($c-fuji-blue-1-b) Ell']")).Click();
+            //var elementExist = driver.FindElement(By.XPath("//*[@id=\"main\"]/section/section/div[2]/table/tbody/tr[1]/td[1]/a"));
+            //if (elementExist)
                 waitForElement.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath("//*[@id=\"main\"]/section/section/div[2]/table/tbody/tr[1]/td[1]/a")));
                 driver.FindElement(By.XPath("//*[@id=\"main\"]/section/section/div[2]/table/tbody/tr[1]/td[1]/a")).Click();
 
